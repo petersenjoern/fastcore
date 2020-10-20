@@ -512,7 +512,7 @@ def readlines(self:Path, hint=-1, encoding='utf8'):
 
 # Cell
 @patch
-def mk_write(self:Path, data, encoding=None, errors=None, mode=511):
+def mk_write(self:Path, data, encoding="utf-8", errors=None, mode=511):
     "Make all parent dirs of `self`"
     self.parent.mkdir(exist_ok=True, parents=True, mode=mode)
     self.write_text(data, encoding=encoding, errors=errors)
