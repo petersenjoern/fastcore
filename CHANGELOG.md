@@ -2,6 +2,67 @@
 
 <!-- do not remove -->
 
+
+## 1.3.1
+
+### New Features
+
+- callable support for `Self` ([#162](https://github.com/fastai/fastcore/issues/162))
+- add filter func to `first` ([#161](https://github.com/fastai/fastcore/issues/161))
+- `maybe_open` context manager and fast `image_size` funcion ([#160](https://github.com/fastai/fastcore/issues/160))
+
+### Bugs Squashed
+
+- Redundent `L.map_filter` removed (since `L.map.filter` does the same thing)
+
+
+## 1.3.0
+
+### Breaking Changes
+
+- `change param name `copy_meta`->`as_copy` in `retain_meta` ([#157](https://github.com/fastai/fastcore/issues/157))
+
+### New Features
+
+- `groupby` extensions for `int` and `str` instead of callables, and an optional `val` transform ([#155](https://github.com/fastai/fastcore/issues/155))
+- add `modified_env` ([#148](https://github.com/fastai/fastcore/issues/148))
+
+### Bugs Squashed
+
+- `coll_repr` printing incorrectly when `max_n`!=10 ([#154](https://github.com/fastai/fastcore/pull/154)), thanks to [@kessido](https://github.com/kessido)
+
+
+## 1.2.5
+
+### New Features
+
+- add `true`, `NullType`, `null`, and `tonull` ([#153](https://github.com/fastai/fastcore/issues/153))
+- add `working_directory` ([#151](https://github.com/fastai/fastcore/issues/151))
+- move `bind` et al to `fastcore.basics` ([#150](https://github.com/fastai/fastcore/issues/150))
+
+
+## 1.2.4
+
+### New Features
+
+- move basic functionality into `fastcore.basics`, using minimal imports ([#149](https://github.com/fastai/fastcore/issues/149))
+- add `anno_dict` and `empty2none` in `meta` ([#145](https://github.com/fastai/fastcore/issues/145))
+
+
+## 1.2.3
+
+### New Features
+
+- add `try_attrs` ([#142](https://github.com/fastai/fastcore/issues/142))
+- add `filter_dict`, `filter_keys`, and `filter_values` ([#140](https://github.com/fastai/fastcore/issues/140))
+- add `str2bool` ([#138](https://github.com/fastai/fastcore/issues/138))
+
+### Bugs Squashed
+
+- `type` fails with `@typedispatch` ([#144](https://github.com/fastai/fastcore/issues/144))
+- `with_cast` fails to cast default values ([#139](https://github.com/fastai/fastcore/issues/139))
+
+
 ## 1.2.2
 
 ### New Features
@@ -9,17 +70,14 @@
 - support `store_true` and `store_false` in `fastcore.script` ([#137](https://github.com/fastai/fastcore/issues/137))
 - add function `otherwise` ([#136](https://github.com/fastai/fastcore/issues/136))
 - add `pdb` debug flag to scripts ([#133](https://github.com/fastai/fastcore/issues/133))
-
-### Bugs Squashed
-
-- Fix `copy_func` to include required keyword defaults ([#134](https://github.com/fastai/fastcore/pull/134)), thanks to [@worc3131](https://github.com/worc3131)
+- Update `copy_func` to include required keyword defaults ([#134](https://github.com/fastai/fastcore/pull/134)), thanks to [@worc3131](https://github.com/worc3131)
 
 
 ## 1.2.0
 
 ### Breaking Changes
 
-- `Config` no longer magically converts `str->Path` for some keys. Use new `path` method instead ([#131](https://github.com/fastai/fastcore/issues/131))
+- `Config` no longer magically converts `str->Path` for any keys. Use new `path` method instead ([#131](https://github.com/fastai/fastcore/issues/131))
 
 ### New Features
 
@@ -27,10 +85,7 @@
 - Use `_repr_pretty_` for `L` ([#129](https://github.com/fastai/fastcore/issues/129))
 - `open_file` to open optionally-compressed files for reading and writing, and add compression support to `load_pickle` and `save_pickle` ([#128](https://github.com/fastai/fastcore/issues/128))
 - add context manager for failed tests ([#126](https://github.com/fastai/fastcore/pull/126)), thanks to [@hamelsmu](https://github.com/hamelsmu)
-
-### Bugs Squashed
-
-- `urlread` does not work with `Request.request` ([#132](https://github.com/fastai/fastcore/issues/132))
+- Add `Request.request` support to `urlread` ([#132](https://github.com/fastai/fastcore/issues/132))
 
 
 ## 1.1.2
@@ -174,6 +229,7 @@
 ### Bugs Squashed
 
 - "has default params. These will be ignored" shown when not appropriate ([#74](https://github.com/fastai/fastcore/issues/74))
+
 
 ## 1.0.1
 
